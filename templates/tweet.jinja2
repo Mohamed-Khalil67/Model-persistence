@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Alert Insults</title>
+</head>
+<body>
+    <form action="/predict" method="GET">
+        Tweet : <input type="text" name="tweet">
+        <input type="submit" value="Check Tweeet">
+    </form> 
+    
+    {% if result %}
+        Class : {{ result }}
+    {% elif result ==0 %}
+        Class : 0
+    {% endif %}
+</body>
+</html>
